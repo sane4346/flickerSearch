@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="kfJ-bQ-uAD" customClass="FlickerCollectionViewCell" customModule="FlickerSearchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-uC-FAA" customClass="customeUIImageView" customModule="FlickerSearchApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="uSe-uC-FAA" firstAttribute="bottom" secondItem="kfJ-bQ-uAD" secondAttribute="bottom" id="gET-C2-ovY"/>
+                <constraint firstItem="uSe-uC-FAA" firstAttribute="top" secondItem="kfJ-bQ-uAD" secondAttribute="top" id="jt7-LE-544"/>
+                <constraint firstItem="uSe-uC-FAA" firstAttribute="trailing" secondItem="kfJ-bQ-uAD" secondAttribute="trailing" id="rJW-Ea-zMs"/>
+                <constraint firstItem="uSe-uC-FAA" firstAttribute="leading" secondItem="kfJ-bQ-uAD" secondAttribute="leading" id="tDv-Fd-Enc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="q49-5X-HN2"/>
+            <connections>
+                <outlet property="flickerCellImage" destination="uSe-uC-FAA" id="L6m-nY-8VE"/>
+            </connections>
+            <point key="canvasLocation" x="1696" y="-118.74062968515743"/>
+        </collectionViewCell>
+    </objects>
+</document>
