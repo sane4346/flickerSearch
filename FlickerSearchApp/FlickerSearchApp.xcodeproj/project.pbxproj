@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		214D7340229091D9004F6EC1 /* FlickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214D733F229091D9004F6EC1 /* FlickerCollectionViewCell.xib */; };
+		214D734222914E93004F6EC1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D734122914E93004F6EC1 /* DetailViewController.swift */; };
 		218289F3228DC496007BE045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218289F2228DC496007BE045 /* AppDelegate.swift */; };
 		218289F5228DC496007BE045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218289F4228DC496007BE045 /* ViewController.swift */; };
 		218289F8228DC496007BE045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218289F6228DC496007BE045 /* Main.storyboard */; };
@@ -18,11 +19,11 @@
 		21828A0A228DD1C8007BE045 /* FlickerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A09228DD1C8007BE045 /* FlickerClient.swift */; };
 		21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */; };
 		21828A0F228DD455007BE045 /* FlickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */; };
-		21828A14228DD94A007BE045 /* image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21828A13228DD94A007BE045 /* image_2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		214D733F229091D9004F6EC1 /* FlickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		214D734122914E93004F6EC1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		218289EF228DC496007BE045 /* FlickerSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218289F2228DC496007BE045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218289F4228DC496007BE045 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		21828A09228DD1C8007BE045 /* FlickerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerClient.swift; sourceTree = "<group>"; };
 		21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerPhotoData.swift; sourceTree = "<group>"; };
 		21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerCollectionViewCell.swift; sourceTree = "<group>"; };
-		21828A13228DD94A007BE045 /* image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_2.jpg; path = ../../../../image_2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,6 @@
 				218289F2228DC496007BE045 /* AppDelegate.swift */,
 				218289F6228DC496007BE045 /* Main.storyboard */,
 				218289FC228DC499007BE045 /* Assets.xcassets */,
-				21828A13228DD94A007BE045 /* image_2.jpg */,
 				218289FE228DC499007BE045 /* LaunchScreen.storyboard */,
 				21828A01228DC499007BE045 /* Info.plist */,
 				218289F9228DC496007BE045 /* FlickerSearchApp.xcdatamodeld */,
@@ -89,6 +88,7 @@
 			children = (
 				218289F4228DC496007BE045 /* ViewController.swift */,
 				21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */,
+				214D734122914E93004F6EC1 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -178,7 +178,6 @@
 				21828A00228DC499007BE045 /* LaunchScreen.storyboard in Resources */,
 				218289FD228DC499007BE045 /* Assets.xcassets in Resources */,
 				214D7340229091D9004F6EC1 /* FlickerCollectionViewCell.xib in Resources */,
-				21828A14228DD94A007BE045 /* image_2.jpg in Resources */,
 				218289F8228DC496007BE045 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +196,7 @@
 				21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */,
 				218289F5228DC496007BE045 /* ViewController.swift in Sources */,
 				218289F3228DC496007BE045 /* AppDelegate.swift in Sources */,
+				214D734222914E93004F6EC1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

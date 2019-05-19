@@ -29,7 +29,7 @@ class customeUIImageView: UIImageView {
     
     var imageUrlString : String?
     
-    func downloadImageFromUrl( for photoData : PhotoData, defaultImage: UIImage? = UIImage(named: "image_2")) {
+    func downloadImageFromUrl( for photoData : PhotoData) {
         let id = photoData.id
         let farm = String(photoData.farm)
         let secret = photoData.secret
@@ -38,7 +38,11 @@ class customeUIImageView: UIImageView {
         
         self.imageUrlString = urlString
         //image chache check before hitting server
-        image = defaultImage
+        DispatchQueue.main.async {
+            self.image = UIImage(named: "thumb")
+        }
+        
+        
         if let imageFromChache = imageCache.object(forKey: urlString as AnyObject) {
             self.image = imageFromChache
             return

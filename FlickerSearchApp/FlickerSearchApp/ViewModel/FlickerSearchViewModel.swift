@@ -30,18 +30,6 @@ class FlickerSearchViewModel {
             }
                 self?.photosData.append(contentsOf: photoResponse.photos.photo) 
                 self?.totalPages = photoResponse.photos.pages
-//            guard let photoData = photo as? [[String:Any]] else {
-//                complete(false)
-//                return
-//            }
-//            for imageData in photoData  {
-//                let id = imageData["id"] as? String
-//                let secret = imageData["secret"] as? String
-//                let farm = imageData["farm"] as! Int
-//                let server = imageData["server"] as? String
-//                let photomodel = FlickerPhotoData(id:id,secret:secret,farm:farm,server:server)
-            
-            //}
             self?.setItemCount(items: self?.photosData.count ?? 0)
             complete(true)
         })

@@ -62,11 +62,42 @@
                     <navigationItem key="navigationItem" id="1d9-fZ-Q3R"/>
                     <connections>
                         <outlet property="collectionView" destination="D3M-P4-iDz" id="Us4-Vw-idC"/>
+                        <segue destination="Aek-sN-9ZG" kind="show" identifier="DetailPhotoSegue" id="FnN-5k-g4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="116.49175412293854"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="1YX-S8-mJq">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="Aek-sN-9ZG" customClass="DetailViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uzS-qI-YkP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-eF-5CK">
+                                <rect key="frame" x="0.0" y="116" width="375" height="417"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d4A-eF-5CK" firstAttribute="leading" secondItem="4NT-aR-ize" secondAttribute="leading" id="KVN-5Q-Iuj"/>
+                            <constraint firstItem="4NT-aR-ize" firstAttribute="bottom" secondItem="d4A-eF-5CK" secondAttribute="bottom" constant="134" id="Kzv-Ir-75U"/>
+                            <constraint firstItem="d4A-eF-5CK" firstAttribute="top" secondItem="4NT-aR-ize" secondAttribute="top" constant="52" id="Sgh-zI-RSn"/>
+                            <constraint firstItem="4NT-aR-ize" firstAttribute="trailing" secondItem="d4A-eF-5CK" secondAttribute="trailing" id="dBq-KL-gMk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4NT-aR-ize"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AWk-dM-riB"/>
+                    <connections>
+                        <outlet property="imageView" destination="d4A-eF-5CK" id="1Xz-Nb-f7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXV-cI-ZFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
