@@ -60,7 +60,7 @@ enum flickerApi  {
     //   "http://farm{farm}.static.flickr.com/{server}/{id}_{secret}.jpg"
     static let imagePath = "http://farm%@.static.flickr.com/%@/%@_%@.jpg"
     //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(AppCredentials.API_KEY)&format=json&nojsoncallback=1&safe_search=1&text=\(searchfield)&page=\(pageNo)"
-    static let photosPath = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=dbbabda39d25fd6b983013f06cc3088c&format=json&nojsoncallback=1&safe_search=1&text=%@&page=%@"
+    static let photosPath = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=28fec7cfe2bc3ceea532200f43540aa2&format=json&nojsoncallback=1&safe_search=1&text=%@&page=%@"
     
     case getPhotosPathFor(searchString:String, pageNo:String)
     case getFLickerImagePathFor(farm:String,server:String,id:String,secret:String)

@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    @IBOutlet weak var NoResultLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
  
     //MARK :- Local variables
@@ -19,7 +17,8 @@ class ViewController: UIViewController {
     var searchField: UITextField?
     var collectionChangeBtn : UIButton?
     var oldString = ""
-    var displayConstant = 3
+    var displayConstant: CGFloat = 3
+    var selectedIndexPath : IndexPath!
     
     var viewModel : FlickerSearchViewModel?
     {
@@ -36,10 +35,24 @@ class ViewController: UIViewController {
         addSearchField()
         searchField?.delegate = self
         searchField?.becomeFirstResponder()
-        collectionView.register(UINib(nibName: "FlickerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "collectionViewCell")
+        collectionView.register(UINib(nibName: "FlickerCollectionViewCell", bundle: nil),forCellWithReuseIdentifier: "collectionViewCell")
         collectionView.keyboardDismissMode = .interactive
         viewModel = FlickerSearchViewModel()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = false
+        self.searchField?.isHidden = false
+        self.collectionChangeBtn?.isHidden = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.searchField?.isHidden = true
+        self.collectionChangeBtn?.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func addSearchField()
@@ -49,8 +62,10 @@ class ViewController: UIViewController {
             let secondFrame = CGRect(x: navigationBar.frame.width/2 + 20 , y: 0, width: navigationBar.frame.width/2 - 30, height: navigationBar.frame.height)
 
             searchField = UITextField(frame: firstFrame)
-            searchField?.backgroundColor = UIColor.gray
+            searchField?.backgroundColor = .lightGray
+            searchField?.tintColor = .blue
             searchField?.placeholder = "Search Images"
+            searchField?.autocorrectionType = .no
             collectionChangeBtn = UIButton(frame: secondFrame)
             collectionChangeBtn?.addTarget(self, action: #selector(btnClicked), for: .touchUpInside)
             collectionChangeBtn?.backgroundColor = .brown
@@ -95,7 +110,7 @@ class ViewController: UIViewController {
                         activityIndicator.stopAnimating()
                         activityIndicator.removeFromSuperview()
                         if status {
-                            self?.viewModel?.photosCount == 0 ? self?.NoResultLabel.isHidden = false : self?.collectionView.reloadData()
+                            self?.collectionView.reloadData()
                         }
                         else {
                             let alert = UIAlertController(title: "Error", message: "Network or server error occured", preferredStyle: UIAlertController.Style.alert)
@@ -107,9 +122,17 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailPhotoSegue" {
+            let vc = segue.destination as? DetailViewController
+            vc?.photoData = viewModel?.photoDataAt(indexPath: self.selectedIndexPath)
+        }
+    }
+    
 }
 
-//MARK :- 
+//MARK :- TextFieldDelegate
 extension ViewController : UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
@@ -125,12 +148,7 @@ extension ViewController : UITextFieldDelegate {
     
 }
 
-
-
-extension ViewController   {
-    
-}
-extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -143,22 +161,21 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
          cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 3
         
-        //cell.backgroundColor=UIColor.white
-        
+
         if let photo  = viewModel?.photoDataAt(indexPath: indexPath)
         {
             cell.configure(photoData:photo)
-        }
-        else {
-            cell.flickerCellImage.image = UIImage(named: "image_2.jpg")
+        } else {
+            cell.flickerCellImage.image = UIImage(named: "thumb")
         }
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        let wh = (UIScreen.main.bounds.size.width)/CGFloat(displayConstant)
-        return CGSize(width: wh, height: wh)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
+        self.performSegue(withIdentifier: "DetailPhotoSegue", sender: self)
     }
+    
     // Check if the current page to scrolled is within limit
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let photosCount = viewModel?.photosData.count,
@@ -173,9 +190,18 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
             
         }
     }
-
-    
 }
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let wh = self.view.frame.width / displayConstant
+        return CGSize(width: wh, height: wh)
+        
+    }
+}
+
+
 
 
 
