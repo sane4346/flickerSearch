@@ -102,7 +102,6 @@
         <!--Photo Zoom View Controller-->
         <scene sceneID="CN4-XI-kLM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="91s-B1-AyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="PhotoZoomViewController" id="wJV-Ue-oyR" customClass="PhotoZoomViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pGd-tO-Rmd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -111,25 +110,25 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s29-Ze-IBc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-ZN-Tel">
-                                        <rect key="frame" x="0.0" y="221" width="375" height="245"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-ZN-Tel">
+                                        <rect key="frame" x="0.0" y="139" width="375" height="327"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="289" id="Des-Tj-BBn"/>
+                                            <constraint firstAttribute="height" constant="327" id="Des-Tj-BBn"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Pzs-ZN-Tel" secondAttribute="bottom" constant="157" id="EtD-CV-WB0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pzs-ZN-Tel" secondAttribute="bottom" constant="201" id="EtD-CV-WB0"/>
                                     <constraint firstItem="Pzs-ZN-Tel" firstAttribute="leading" secondItem="s29-Ze-IBc" secondAttribute="leading" id="Ldd-xX-ZSR"/>
                                     <constraint firstAttribute="trailing" secondItem="Pzs-ZN-Tel" secondAttribute="trailing" id="osV-cl-iGm"/>
-                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" constant="221" id="vLB-Cz-1RM"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" constant="139" id="vLB-Cz-1RM"/>
                                     <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerX" secondItem="s29-Ze-IBc" secondAttribute="centerX" id="yng-O0-1QT"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerY" secondItem="laz-wr-Uu4" secondAttribute="centerY" id="0cR-1j-9v2"/>
+                            <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerY" secondItem="laz-wr-Uu4" secondAttribute="centerY" constant="-41" id="0cR-1j-9v2"/>
                             <constraint firstItem="s29-Ze-IBc" firstAttribute="leading" secondItem="pGd-tO-Rmd" secondAttribute="leading" id="2UM-Eg-fMq"/>
                             <constraint firstAttribute="trailing" secondItem="s29-Ze-IBc" secondAttribute="trailing" id="DK3-3o-ywI"/>
                             <constraint firstAttribute="bottom" secondItem="s29-Ze-IBc" secondAttribute="bottom" id="Imc-Yp-P8s"/>
@@ -146,20 +145,22 @@
                         <outlet property="scrollView" destination="s29-Ze-IBc" id="RcZ-49-5Kq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91s-B1-AyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2672.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="gFU-oa-s6p">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-im-efz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eqw-6o-drL" customClass="UIPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Req-wG-Z4c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0cg-BR-7KP"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-im-efz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1820" y="106"/>
         </scene>

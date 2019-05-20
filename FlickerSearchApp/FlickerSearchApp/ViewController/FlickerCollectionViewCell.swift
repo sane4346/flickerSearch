@@ -37,7 +37,7 @@ class customeUIImageView: UIImageView {
         let urlString = flickerApi.getFLickerImagePathFor(farm: farm, server: server, id: id, secret: secret).path
         
         self.imageUrlString = urlString
-        //self.image = UIImage(named: "thumb")
+        self.image = UIImage(named: "thumb")
         
          //image chache check before hitting server
         if let imageFromChache = imageCache.object(forKey: urlString as AnyObject) {

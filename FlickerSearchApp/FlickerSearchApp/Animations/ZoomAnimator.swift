@@ -52,7 +52,7 @@ class ZoomAnimator: NSObject {
         
         if self.transitionImageView == nil {
             let transitionImageView = UIImageView(image: referenceImage)
-            transitionImageView.contentMode = .center
+            transitionImageView.contentMode = .scaleAspectFit
             transitionImageView.clipsToBounds = true
             transitionImageView.frame = fromReferenceImageViewFrame
             self.transitionImageView = transitionImageView
@@ -109,7 +109,7 @@ class ZoomAnimator: NSObject {
         
         if self.transitionImageView == nil {
             let transitionImageView = UIImageView(image: referenceImage)
-            transitionImageView.contentMode = .center
+            transitionImageView.contentMode = .scaleAspectFit
             transitionImageView.clipsToBounds = true
             transitionImageView.frame = fromReferenceImageViewFrame
             self.transitionImageView = transitionImageView
