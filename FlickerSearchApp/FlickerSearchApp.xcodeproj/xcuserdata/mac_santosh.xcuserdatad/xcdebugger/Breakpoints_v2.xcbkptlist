@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.185445"
+            timestampString = "580079480.5529521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.185851"
+            timestampString = "580079480.553102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.186101"
+            timestampString = "580079480.553198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -57,28 +57,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.18634"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "downloadImageFromUrl(for:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.068344"
+            timestampString = "580075065.603956"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.068401"
+            timestampString = "580075065.604036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "flickerApi"
             landmarkType = "13">
          </BreakpointContent>
@@ -106,13 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.068451"
+            timestampString = "580075065.604121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "FlickerClient"
-            landmarkType = "3">
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.068499"
+            timestampString = "580075065.604195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.186655"
+            timestampString = "580079480.553492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -154,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.18671"
+            timestampString = "580079480.5541101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "loadDataForCollectionView(text:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.186758"
+            timestampString = "580079480.554593"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "addSearchField()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,45 +186,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.069675"
+            timestampString = "580075065.6045361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FlickerSearchApp.FlickerClient.sendRequestForImagesData(searchText: Swift.String, pageNo: Swift.Int, complete: (Swift.Optional&lt;FlickerSearchApp.PhotoSearchRootResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FlickerSearchApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/coder104/Documents/LEARNING/flickerSearch/FlickerSearchApp/FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-                  timestampString = "579892152.4991241"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "753">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FlickerSearchApp.FlickerClient.sendRequestForImagesData(searchText: Swift.String, pageNo: Swift.Int, complete: (Swift.Optional&lt;FlickerSearchApp.PhotoSearchRootResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FlickerSearchApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/coder104/Documents/LEARNING/flickerSearch/FlickerSearchApp/FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-                  timestampString = "579892152.502344"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "314">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -250,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.06973"
+            timestampString = "580075065.604609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -292,11 +244,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.069778"
+            timestampString = "580075065.6046799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -310,7 +262,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.069826"
+            timestampString = "580075065.604748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -352,43 +304,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.069873"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.069919"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.0699641"
+            timestampString = "580075065.604817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -400,11 +320,43 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
+            timestampString = "580075065.6048861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "FlickerClient"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
+            timestampString = "580075065.604956"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/Data/FlickerPhotoData.swift"
-            timestampString = "579975862.8083071"
+            timestampString = "580078102.6116379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -420,7 +372,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/Data/FlickerPhotoData.swift"
-            timestampString = "579975862.808388"
+            timestampString = "580078102.611692"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -436,7 +388,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/Data/FlickerPhotoData.swift"
-            timestampString = "579975862.808465"
+            timestampString = "580078102.611739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -452,7 +404,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/Data/FlickerPhotoData.swift"
-            timestampString = "579975862.8085459"
+            timestampString = "580078102.6117851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -468,11 +420,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.18698"
+            timestampString = "580079480.5554169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "btnClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -484,11 +436,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.187027"
+            timestampString = "580079480.555907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "btnClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -500,11 +452,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.1870739"
+            timestampString = "580079480.556363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "downloadImageFromUrl(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -516,11 +468,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.187317"
+            timestampString = "580079480.556446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -532,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.187366"
+            timestampString = "580079480.556868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "downloadImageFromUrl(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -548,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
-            timestampString = "579990973.187603"
+            timestampString = "580079480.556945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "downloadImageFromUrl(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -564,23 +516,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.071121"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.0711679"
+            timestampString = "580075065.605576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -593,12 +529,26 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FlickerSearchApp/ViewController/DetailViewController.swift"
-            timestampString = "579990973.187875"
+            filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
+            timestampString = "580075065.605643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "78"
+            endingLineNumber = "78">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/DetailViewController.swift"
+            timestampString = "580079480.557104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "downloadImageForGiven(photoDta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -610,11 +560,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/DetailViewController.swift"
-            timestampString = "579990973.187923"
+            timestampString = "580079480.557191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -622,15 +572,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.071476"
+            timestampString = "580075065.606513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -638,15 +588,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/NetworkAPI/FlickerClient.swift"
-            timestampString = "579990099.071556"
+            timestampString = "580075065.60657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "sendRequestForImagesData(searchText:pageNo:complete:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -658,11 +608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/ViewController.swift"
-            timestampString = "579990973.187999"
+            timestampString = "580079480.5573421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -674,12 +624,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlickerSearchApp/ViewController/DetailViewController.swift"
-            timestampString = "579990973.188044"
+            timestampString = "580079480.5578721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "downloadImageForGiven(photoDta:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/ViewController.swift"
+            timestampString = "580079480.557984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/FlickerCollectionViewCell.swift"
+            timestampString = "580079480.55855"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "downloadImageFromUrl(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/PhotoZoomViewController.swift"
+            timestampString = "580079480.558683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "updateZoomScaleForSize(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/PhotoZoomViewController.swift"
+            timestampString = "580079480.558774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "updateConstraintsForSize(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlickerSearchApp/ViewController/ViewController.swift"
+            timestampString = "580079582.642426"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
+            landmarkName = "getImageViewFromCollectionViewCell(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
