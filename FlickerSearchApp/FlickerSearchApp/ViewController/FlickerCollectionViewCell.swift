@@ -37,16 +37,14 @@ class customeUIImageView: UIImageView {
         let urlString = flickerApi.getFLickerImagePathFor(farm: farm, server: server, id: id, secret: secret).path
         
         self.imageUrlString = urlString
-        //image chache check before hitting server
-        DispatchQueue.main.async {
-            self.image = UIImage(named: "thumb")
-        }
+        //self.image = UIImage(named: "thumb")
         
-        
+         //image chache check before hitting server
         if let imageFromChache = imageCache.object(forKey: urlString as AnyObject) {
             self.image = imageFromChache
             return
         }
+        
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url, completionHandler :{ [weak self ] (data , response ,error) in
             guard let httpURLResponse = response as? HTTPURLResponse , httpURLResponse.statusCode == 200,

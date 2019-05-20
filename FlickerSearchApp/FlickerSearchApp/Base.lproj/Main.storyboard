@@ -69,35 +69,99 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="116.49175412293854"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Photo Page Container View Controller-->
         <scene sceneID="1YX-S8-mJq">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" id="Aek-sN-9ZG" customClass="DetailViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="Aek-sN-9ZG" customClass="PhotoPageContainerViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzS-qI-YkP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-eF-5CK">
-                                <rect key="frame" x="0.0" y="116" width="375" height="417"/>
-                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-Ee-c6W">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="eqw-6o-drL" kind="embed" id="hee-gs-1XW"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="d4A-eF-5CK" firstAttribute="leading" secondItem="4NT-aR-ize" secondAttribute="leading" id="KVN-5Q-Iuj"/>
-                            <constraint firstItem="4NT-aR-ize" firstAttribute="bottom" secondItem="d4A-eF-5CK" secondAttribute="bottom" constant="134" id="Kzv-Ir-75U"/>
-                            <constraint firstItem="d4A-eF-5CK" firstAttribute="top" secondItem="4NT-aR-ize" secondAttribute="top" constant="52" id="Sgh-zI-RSn"/>
-                            <constraint firstItem="4NT-aR-ize" firstAttribute="trailing" secondItem="d4A-eF-5CK" secondAttribute="trailing" id="dBq-KL-gMk"/>
+                            <constraint firstItem="eNh-Ee-c6W" firstAttribute="top" secondItem="4NT-aR-ize" secondAttribute="top" id="4PB-p3-hep"/>
+                            <constraint firstItem="4NT-aR-ize" firstAttribute="trailing" secondItem="eNh-Ee-c6W" secondAttribute="trailing" id="9E1-xG-nb7"/>
+                            <constraint firstItem="eNh-Ee-c6W" firstAttribute="leading" secondItem="4NT-aR-ize" secondAttribute="leading" id="FbH-HU-OMG"/>
+                            <constraint firstItem="4NT-aR-ize" firstAttribute="bottom" secondItem="eNh-Ee-c6W" secondAttribute="bottom" id="XpX-UB-5g3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4NT-aR-ize"/>
                     </view>
                     <navigationItem key="navigationItem" id="AWk-dM-riB"/>
-                    <connections>
-                        <outlet property="imageView" destination="d4A-eF-5CK" id="1Xz-Nb-f7l"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXV-cI-ZFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="976.79999999999995" y="115.59220389805098"/>
+        </scene>
+        <!--Photo Zoom View Controller-->
+        <scene sceneID="CN4-XI-kLM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91s-B1-AyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PhotoZoomViewController" id="wJV-Ue-oyR" customClass="PhotoZoomViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pGd-tO-Rmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s29-Ze-IBc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-ZN-Tel">
+                                        <rect key="frame" x="0.0" y="221" width="375" height="245"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="289" id="Des-Tj-BBn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Pzs-ZN-Tel" secondAttribute="bottom" constant="157" id="EtD-CV-WB0"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="leading" secondItem="s29-Ze-IBc" secondAttribute="leading" id="Ldd-xX-ZSR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pzs-ZN-Tel" secondAttribute="trailing" id="osV-cl-iGm"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" constant="221" id="vLB-Cz-1RM"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerX" secondItem="s29-Ze-IBc" secondAttribute="centerX" id="yng-O0-1QT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerY" secondItem="laz-wr-Uu4" secondAttribute="centerY" id="0cR-1j-9v2"/>
+                            <constraint firstItem="s29-Ze-IBc" firstAttribute="leading" secondItem="pGd-tO-Rmd" secondAttribute="leading" id="2UM-Eg-fMq"/>
+                            <constraint firstAttribute="trailing" secondItem="s29-Ze-IBc" secondAttribute="trailing" id="DK3-3o-ywI"/>
+                            <constraint firstAttribute="bottom" secondItem="s29-Ze-IBc" secondAttribute="bottom" id="Imc-Yp-P8s"/>
+                            <constraint firstItem="s29-Ze-IBc" firstAttribute="top" secondItem="pGd-tO-Rmd" secondAttribute="top" id="bV1-ap-KmM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="laz-wr-Uu4"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Pzs-ZN-Tel" id="rNy-nQ-RBA"/>
+                        <outlet property="imageViewBottomConstraint" destination="EtD-CV-WB0" id="Xof-pF-A2o"/>
+                        <outlet property="imageViewLeadingConstraint" destination="Ldd-xX-ZSR" id="xE8-Qh-PF5"/>
+                        <outlet property="imageViewTopConstraint" destination="vLB-Cz-1RM" id="cft-BC-vMB"/>
+                        <outlet property="imageViewTrailingConstraint" destination="osV-cl-iGm" id="eUJ-gB-g0B"/>
+                        <outlet property="scrollView" destination="s29-Ze-IBc" id="RcZ-49-5Kq"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2672.8000000000002" y="115.59220389805098"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="gFU-oa-s6p">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-im-efz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="eqw-6o-drL" customClass="UIPageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Req-wG-Z4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1820" y="106"/>
         </scene>
     </scenes>
 </document>

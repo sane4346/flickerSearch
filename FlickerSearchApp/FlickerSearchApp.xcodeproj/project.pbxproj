@@ -19,6 +19,10 @@
 		21828A0A228DD1C8007BE045 /* FlickerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A09228DD1C8007BE045 /* FlickerClient.swift */; };
 		21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */; };
 		21828A0F228DD455007BE045 /* FlickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */; };
+		21F4CAE52293072A00F73F90 /* PhotoZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE42293072A00F73F90 /* PhotoZoomViewController.swift */; };
+		21F4CAE72293086800F73F90 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE62293086800F73F90 /* ZoomAnimator.swift */; };
+		21F4CAE92293089500F73F90 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */; };
+		21F4CAEB229308B300F73F90 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		21828A09228DD1C8007BE045 /* FlickerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerClient.swift; sourceTree = "<group>"; };
 		21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerPhotoData.swift; sourceTree = "<group>"; };
 		21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		21F4CAE42293072A00F73F90 /* PhotoZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomViewController.swift; sourceTree = "<group>"; };
+		21F4CAE62293086800F73F90 /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
+		21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
+		21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		218289F1228DC496007BE045 /* FlickerSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				21F4CAE32292F9E200F73F90 /* Animations */,
 				21828A12228DD5BA007BE045 /* NetworkAPI */,
 				21828A11228DD5A8007BE045 /* ViewModel */,
 				21828A10228DD581007BE045 /* Data */,
@@ -89,6 +98,7 @@
 				218289F4228DC496007BE045 /* ViewController.swift */,
 				21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */,
 				214D734122914E93004F6EC1 /* DetailViewController.swift */,
+				21F4CAE42293072A00F73F90 /* PhotoZoomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -115,6 +125,16 @@
 				21828A09228DD1C8007BE045 /* FlickerClient.swift */,
 			);
 			path = NetworkAPI;
+			sourceTree = "<group>";
+		};
+		21F4CAE32292F9E200F73F90 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				21F4CAE62293086800F73F90 /* ZoomAnimator.swift */,
+				21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */,
+				21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21828A0A228DD1C8007BE045 /* FlickerClient.swift in Sources */,
+				21F4CAEB229308B300F73F90 /* ZoomTransitionController.swift in Sources */,
 				218289FB228DC496007BE045 /* FlickerSearchApp.xcdatamodeld in Sources */,
+				21F4CAE52293072A00F73F90 /* PhotoZoomViewController.swift in Sources */,
+				21F4CAE72293086800F73F90 /* ZoomAnimator.swift in Sources */,
 				21828A08228DD0A9007BE045 /* FlickerSearchViewModel.swift in Sources */,
 				21828A0F228DD455007BE045 /* FlickerCollectionViewCell.swift in Sources */,
+				21F4CAE92293089500F73F90 /* ZoomDismissalInteractionController.swift in Sources */,
 				21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */,
 				218289F5228DC496007BE045 /* ViewController.swift in Sources */,
 				218289F3228DC496007BE045 /* AppDelegate.swift in Sources */,
