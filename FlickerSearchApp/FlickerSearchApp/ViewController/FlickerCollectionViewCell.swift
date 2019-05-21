@@ -17,7 +17,7 @@ class FlickerCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(photoData : PhotoData) {
-            self.flickerCellImage.downloadImageFromUrl(for: photoData)
+        self.flickerCellImage.downloadImageFromUrl(for: photoData)
     }
     
 }
@@ -37,29 +37,31 @@ class customeUIImageView: UIImageView {
         let urlString = flickerApi.getFLickerImagePathFor(farm: farm, server: server, id: id, secret: secret).path
         
         self.imageUrlString = urlString
-        self.image = UIImage(named: "thumb")
         
-         //image chache check before hitting server
+        //image chache check before hitting server
         if let imageFromChache = imageCache.object(forKey: urlString as AnyObject) {
             self.image = imageFromChache
             return
         }
         
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url, completionHandler :{ [weak self ] (data , response ,error) in
-            guard let httpURLResponse = response as? HTTPURLResponse , httpURLResponse.statusCode == 200,
-                let data = data else { return }
-            
-            DispatchQueue.main.async {
-                if let imageToChache = UIImage(data: data) {
-                    if self?.imageUrlString == urlString {
-                        self?.image = imageToChache
+        self.image = UIImage(named: "thumb")
+        
+        if let url = URL(string: urlString) {
+            let task =  URLSession.shared.dataTask(with: url){ [weak self ] (data , response ,error) in
+                    guard let httpURLResponse = response as? HTTPURLResponse , httpURLResponse.statusCode == 200,
+                        let data = data else { return }
+                    
+                    DispatchQueue.main.async {
+                        if let imageToChache = UIImage(data: data) {
+                            if self?.imageUrlString == urlString {
+                                self?.image = imageToChache
+                            }
+                            imageCache.setObject(imageToChache, forKey: urlString as AnyObject)
+                        }
                     }
-                    imageCache.setObject(imageToChache, forKey: urlString as AnyObject)
-                }
             }
-            
-        }).resume()
+            task.resume()
+        }
     }
 }
 

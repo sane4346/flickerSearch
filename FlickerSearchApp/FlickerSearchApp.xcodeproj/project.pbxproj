@@ -20,9 +20,8 @@
 		21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */; };
 		21828A0F228DD455007BE045 /* FlickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */; };
 		21F4CAE52293072A00F73F90 /* PhotoZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE42293072A00F73F90 /* PhotoZoomViewController.swift */; };
-		21F4CAE72293086800F73F90 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE62293086800F73F90 /* ZoomAnimator.swift */; };
-		21F4CAE92293089500F73F90 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */; };
-		21F4CAEB229308B300F73F90 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */; };
+		21F4CAE72293086800F73F90 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAE62293086800F73F90 /* Animator.swift */; };
+		21F4CAEB229308B300F73F90 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4CAEA229308B300F73F90 /* TransitionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +40,8 @@
 		21828A0B228DD2F1007BE045 /* FlickerPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerPhotoData.swift; sourceTree = "<group>"; };
 		21828A0E228DD455007BE045 /* FlickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		21F4CAE42293072A00F73F90 /* PhotoZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomViewController.swift; sourceTree = "<group>"; };
-		21F4CAE62293086800F73F90 /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
-		21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
-		21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
+		21F4CAE62293086800F73F90 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		21F4CAEA229308B300F73F90 /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +128,8 @@
 		21F4CAE32292F9E200F73F90 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				21F4CAE62293086800F73F90 /* ZoomAnimator.swift */,
-				21F4CAE82293089500F73F90 /* ZoomDismissalInteractionController.swift */,
-				21F4CAEA229308B300F73F90 /* ZoomTransitionController.swift */,
+				21F4CAE62293086800F73F90 /* Animator.swift */,
+				21F4CAEA229308B300F73F90 /* TransitionController.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -210,13 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				21828A0A228DD1C8007BE045 /* FlickerClient.swift in Sources */,
-				21F4CAEB229308B300F73F90 /* ZoomTransitionController.swift in Sources */,
+				21F4CAEB229308B300F73F90 /* TransitionController.swift in Sources */,
 				218289FB228DC496007BE045 /* FlickerSearchApp.xcdatamodeld in Sources */,
 				21F4CAE52293072A00F73F90 /* PhotoZoomViewController.swift in Sources */,
-				21F4CAE72293086800F73F90 /* ZoomAnimator.swift in Sources */,
+				21F4CAE72293086800F73F90 /* Animator.swift in Sources */,
 				21828A08228DD0A9007BE045 /* FlickerSearchViewModel.swift in Sources */,
 				21828A0F228DD455007BE045 /* FlickerCollectionViewCell.swift in Sources */,
-				21F4CAE92293089500F73F90 /* ZoomDismissalInteractionController.swift in Sources */,
 				21828A0C228DD2F1007BE045 /* FlickerPhotoData.swift in Sources */,
 				218289F5228DC496007BE045 /* ViewController.swift in Sources */,
 				218289F3228DC496007BE045 /* AppDelegate.swift in Sources */,
@@ -297,13 +293,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -352,12 +349,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -375,7 +373,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.santosh104.dev.FlickerSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -393,7 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.santosh104.dev.FlickerSearchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

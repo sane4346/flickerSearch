@@ -1,5 +1,5 @@
 //
-//  ZoomTransitionController.swift
+//  TransitionController
 //  FlickerSearchApp
 //
 //  Created by santosh chaurasia on 20/05/19.
@@ -9,27 +9,22 @@
 
 import UIKit
 
-class ZoomTransitionController: NSObject {
+class TransitionController: NSObject {
     
-    let animator: ZoomAnimator
-    let interactionController: ZoomDismissalInteractionController
-    var isInteractive: Bool = false
+    let animator: Animator
     
-    weak var fromDelegate: ZoomAnimatorDelegate?
-    weak var toDelegate: ZoomAnimatorDelegate?
+    
+    weak var fromDelegate: AnimatorDelegate?
+    weak var toDelegate: AnimatorDelegate?
     
     override init() {
-        animator = ZoomAnimator()
-        interactionController = ZoomDismissalInteractionController()
+        animator = Animator()
         super.init()
     }
     
-    func didPanWith(gestureRecognizer: UIPanGestureRecognizer) {
-        self.interactionController.didPanWith(gestureRecognizer: gestureRecognizer)
-    }
 }
 
-extension ZoomTransitionController: UIViewControllerTransitioningDelegate {
+extension TransitionController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self.animator.isPresenting = true
         self.animator.fromDelegate = fromDelegate
@@ -45,18 +40,10 @@ extension ZoomTransitionController: UIViewControllerTransitioningDelegate {
         return self.animator
     }
     
-    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        if !self.isInteractive {
-            return nil
-        }
-        
-        self.interactionController.animator = animator
-        return self.interactionController
-    }
     
 }
 
-extension ZoomTransitionController: UINavigationControllerDelegate {
+extension TransitionController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if operation == .push {
@@ -71,16 +58,6 @@ extension ZoomTransitionController: UINavigationControllerDelegate {
         }
         
         return self.animator
-    }
-    
-    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
-        if !self.isInteractive {
-            return nil
-        }
-        
-        self.interactionController.animator = animator
-        return self.interactionController
     }
     
 }

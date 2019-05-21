@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Uw-3j-pxG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Uw-3j-pxG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -102,46 +102,39 @@
         <!--Photo Zoom View Controller-->
         <scene sceneID="CN4-XI-kLM">
             <objects>
-                <viewController storyboardIdentifier="PhotoZoomViewController" id="wJV-Ue-oyR" customClass="PhotoZoomViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoZoomViewController" automaticallyAdjustsScrollViewInsets="NO" id="wJV-Ue-oyR" customClass="PhotoZoomViewController" customModule="FlickerSearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pGd-tO-Rmd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s29-Ze-IBc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-ZN-Tel">
-                                        <rect key="frame" x="0.0" y="139" width="375" height="327"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="327" id="Des-Tj-BBn"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-ZN-Tel">
+                                        <rect key="frame" x="0.0" y="172" width="375" height="249"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Pzs-ZN-Tel" secondAttribute="bottom" constant="201" id="EtD-CV-WB0"/>
-                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="leading" secondItem="s29-Ze-IBc" secondAttribute="leading" id="Ldd-xX-ZSR"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pzs-ZN-Tel" secondAttribute="trailing" id="osV-cl-iGm"/>
-                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" constant="139" id="vLB-Cz-1RM"/>
-                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerX" secondItem="s29-Ze-IBc" secondAttribute="centerX" id="yng-O0-1QT"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerY" secondItem="s29-Ze-IBc" secondAttribute="centerY" constant="-27" id="06t-83-LHK"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" constant="172" id="EDw-jn-i9D"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="leading" secondItem="s29-Ze-IBc" secondAttribute="leading" id="Fyn-AA-k5Q"/>
+                                    <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerX" secondItem="s29-Ze-IBc" secondAttribute="centerX" id="ROd-HQ-6n2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pzs-ZN-Tel" secondAttribute="bottom" constant="226" id="kBU-T1-QoN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pzs-ZN-Tel" secondAttribute="trailing" id="prt-Ed-B39"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pzs-ZN-Tel" firstAttribute="centerY" secondItem="laz-wr-Uu4" secondAttribute="centerY" constant="-41" id="0cR-1j-9v2"/>
-                            <constraint firstItem="s29-Ze-IBc" firstAttribute="leading" secondItem="pGd-tO-Rmd" secondAttribute="leading" id="2UM-Eg-fMq"/>
-                            <constraint firstAttribute="trailing" secondItem="s29-Ze-IBc" secondAttribute="trailing" id="DK3-3o-ywI"/>
-                            <constraint firstAttribute="bottom" secondItem="s29-Ze-IBc" secondAttribute="bottom" id="Imc-Yp-P8s"/>
-                            <constraint firstItem="s29-Ze-IBc" firstAttribute="top" secondItem="pGd-tO-Rmd" secondAttribute="top" id="bV1-ap-KmM"/>
+                            <constraint firstItem="laz-wr-Uu4" firstAttribute="top" secondItem="s29-Ze-IBc" secondAttribute="top" id="Ppf-yq-vDx"/>
+                            <constraint firstItem="s29-Ze-IBc" firstAttribute="leading" secondItem="laz-wr-Uu4" secondAttribute="leading" id="Y12-TP-hwZ"/>
+                            <constraint firstItem="laz-wr-Uu4" firstAttribute="bottom" secondItem="s29-Ze-IBc" secondAttribute="bottom" id="ltf-cu-omN"/>
+                            <constraint firstItem="laz-wr-Uu4" firstAttribute="trailing" secondItem="s29-Ze-IBc" secondAttribute="trailing" id="pTR-rh-IIf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="laz-wr-Uu4"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Pzs-ZN-Tel" id="rNy-nQ-RBA"/>
-                        <outlet property="imageViewBottomConstraint" destination="EtD-CV-WB0" id="Xof-pF-A2o"/>
-                        <outlet property="imageViewLeadingConstraint" destination="Ldd-xX-ZSR" id="xE8-Qh-PF5"/>
-                        <outlet property="imageViewTopConstraint" destination="vLB-Cz-1RM" id="cft-BC-vMB"/>
-                        <outlet property="imageViewTrailingConstraint" destination="osV-cl-iGm" id="eUJ-gB-g0B"/>
                         <outlet property="scrollView" destination="s29-Ze-IBc" id="RcZ-49-5Kq"/>
                     </connections>
                 </viewController>
@@ -157,7 +150,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="0cg-BR-7KP"/>
+                        <viewLayoutGuide key="safeArea" id="ojb-pP-NVH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8Z-im-efz" userLabel="First Responder" sceneMemberID="firstResponder"/>

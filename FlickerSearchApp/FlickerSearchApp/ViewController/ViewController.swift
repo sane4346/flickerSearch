@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
- 
+    
     //MARK :- Local variables
     var pageNo = 1
     var searchField: UITextField?
@@ -19,9 +19,6 @@ class ViewController: UIViewController {
     var oldString = ""
     var displayConstant: CGFloat = 3
     var selectedIndexPath : IndexPath!
-    
-    var currentLeftSafeAreaInset  : CGFloat = 0.0
-    var currentRightSafeAreaInset : CGFloat = 0.0
     
     
     var viewModel : FlickerSearchViewModel?
@@ -40,7 +37,6 @@ class ViewController: UIViewController {
         searchField?.delegate = self
         searchField?.becomeFirstResponder()
         collectionView.register(UINib(nibName: "FlickerCollectionViewCell", bundle: nil),forCellWithReuseIdentifier: "collectionViewCell")
-        collectionView.keyboardDismissMode = .interactive
         viewModel = FlickerSearchViewModel()
         // Do any additional setup after loading the view.
     }
@@ -51,7 +47,7 @@ class ViewController: UIViewController {
         self.searchField?.isHidden = false
         self.collectionChangeBtn?.isHidden = false
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.searchField?.isHidden = true
@@ -59,12 +55,12 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    func addSearchField()
+    private func addSearchField()
     {
         if let navigationBar = self.navigationController?.navigationBar {
             let firstFrame = CGRect(x: 10, y: 0, width: navigationBar.frame.width/2, height: navigationBar.frame.height)
             let secondFrame = CGRect(x: navigationBar.frame.width/2 + 20 , y: 0, width: navigationBar.frame.width/2 - 30, height: navigationBar.frame.height)
-
+            
             searchField = UITextField(frame: firstFrame)
             searchField?.backgroundColor = .lightGray
             searchField?.tintColor = .blue
@@ -95,8 +91,7 @@ class ViewController: UIViewController {
     }
     
     func loadDataForCollectionView(text: String?) {
-
-
+        
         if let searchText = text , searchText.count > 0 {
             if oldString != searchText {
                 viewModel?.photosData.removeAll()
@@ -127,90 +122,6 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewSafeAreaInsetsDidChange() {
-        
-        //if the application launches in landscape mode, the safeAreaInsets
-        //need to be updated from 0.0 if the device is an iPhone X model. At
-        //application launch this function is called before viewWillLayoutSubviews()
-        if #available(iOS 11, *) {
-            
-            self.currentLeftSafeAreaInset = self.view.safeAreaInsets.left
-            self.currentRightSafeAreaInset = self.view.safeAreaInsets.right
-        }
-        
-    }
-    
-//    override func viewWillLayoutSubviews() {
-//
-//        //Only perform these changes for devices running iOS 11 and later. This is called
-//        //inside viewWillLayoutSubviews() instead of viewWillTransition() because when the
-//        //device rotates, the navBarHeight and statusBarHeight will be calculated inside
-//        //viewWillTransition() using the current orientation, and not the orientation
-//        //that the device will be at the end of the transition.
-//
-//        //By the time that viewWillLayoutSubviews() is called, the views frames have been
-//        //properly updated for the new orientation, so the navBar and statusBar height values
-//        //can be calculated and applied directly as per the code below
-//
-//        if #available(iOS 11, *) {
-//
-//            self.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.view.bounds.size)
-//            self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.view.bounds.size)
-//
-//            self.collectionView.contentInsetAdjustmentBehavior = .never
-//            let statusBarHeight : CGFloat = UIApplication.shared.statusBarFrame.height
-//            let navBarHeight : CGFloat = navigationController?.navigationBar.frame.height ?? 0
-//            self.edgesForExtendedLayout = .all
-//            let tabBarHeight = self.tabBarController?.tabBar.frame.height ?? 0
-//
-//            if UIDevice.current.orientation.isLandscape {
-//                self.collectionView.contentInset = UIEdgeInsets(top: (navBarHeight) + statusBarHeight, left: self.currentLeftSafeAreaInset, bottom: tabBarHeight, right: self.currentRightSafeAreaInset)
-//            }
-//            else {
-//                self.collectionView.contentInset = UIEdgeInsets(top: (navBarHeight) + statusBarHeight, left: 0.0, bottom: tabBarHeight, right: 0.0)
-//            }
-//        }
-//    }
-    
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-            //Support for devices running iOS 10 and below
-            
-            //Check to see if the view is currently visible, and if so,
-            //animate the frame transition to the new orientation
-            if self.viewIfLoaded?.window != nil {
-                
-                coordinator.animate(alongsideTransition: { _ in
-                    
-                    //This needs to be called inside viewWillTransition() instead of viewWillLayoutSubviews()
-                    //for devices running iOS 10.0 and earlier otherwise the frames for the view and the
-                    //collectionView will not be calculated properly.
-                    self.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-                    self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-                    
-                }, completion: { _ in
-                    
-                    //Invalidate the collectionViewLayout
-                    self.collectionView.collectionViewLayout.invalidateLayout()
-                    
-                })
-                
-            }
-                //Otherwise, do not animate the transition
-            else {
-                
-                self.view.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-                self.collectionView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-                
-                //Invalidate the collectionViewLayout
-                self.collectionView.collectionViewLayout.invalidateLayout()
-                
-            }
-        
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailPhotoSegue" {
@@ -221,8 +132,7 @@ class ViewController: UIViewController {
             vc?.transitionController.fromDelegate = self
             vc?.transitionController.toDelegate = vc ?? nil
             vc?.delegate = self
-            vc?.currentIndex = self.selectedIndexPath.row
-            vc?.photos = getImageViewFromCollectionViewCell(for: selectedIndexPath).image //UIImage(named: "thumb")
+            vc?.photos = getImageViewFromCollectionViewCell(for: selectedIndexPath).image
         }
     }
     
@@ -252,19 +162,23 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! FlickerCollectionViewCell
-        cell.layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.5, 0.5, 0.5, 1.0])
-         cell.layer.borderWidth = 0.5
-        cell.layer.cornerRadius = 3
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as? FlickerCollectionViewCell
+        cell?.layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [0.5, 0.5, 0.5, 1.0])
+        cell?.layer.borderWidth = 0.5
+        cell?.layer.cornerRadius = 3
         
-
+        
         if let photo  = viewModel?.photoDataAt(indexPath: indexPath)
         {
-            cell.configure(photoData:photo)
+            cell?.configure(photoData:photo)
         } else {
-            cell.flickerCellImage.image = UIImage(named: "thumb")
+            cell?.flickerCellImage.image = UIImage(named: "thumb")
         }
-        return cell
+        if let cell1 = cell{
+            return cell1
+        } else {
+            return UICollectionViewCell()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -276,7 +190,7 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let photosCount = viewModel?.photosData.count,
             let maxPages = viewModel?.totalPages else{
-            return
+                return
         }
         if(indexPath.row == photosCount-1){
             if (pageNo<maxPages), let text = searchField?.text{
@@ -287,78 +201,57 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
         }
     }
     
-    //This function prevents the collectionView from accessing a deallocated cell. In the event
-    //that the cell for the selectedIndexPath is nil, a default UIImageView is returned in its place
     func getImageViewFromCollectionViewCell(for selectedIndexPath: IndexPath) -> UIImageView {
         
-        //Get the array of visible cells in the collectionView
+        
         let visibleCells = self.collectionView.indexPathsForVisibleItems
         
-        //If the current indexPath is not visible in the collectionView,
-        //scroll the collectionView to the cell to prevent it from returning a nil value
         if !visibleCells.contains(self.selectedIndexPath) {
-            
-            //Scroll the collectionView to the current selectedIndexPath which is offscreen
             self.collectionView.scrollToItem(at: self.selectedIndexPath, at: .centeredVertically, animated: false)
             
-            //Reload the items at the newly visible indexPaths
             self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
             self.collectionView.layoutIfNeeded()
             
-            //Guard against nil values
-            guard let guardedCell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
-                //Return a default UIImageView
+            
+            guard let cell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
                 return UIImageView(frame: CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0))
             }
             //The PhotoCollectionViewCell was found in the collectionView, return the image
-            return guardedCell.flickerCellImage
+            return cell.flickerCellImage
         }
         else {
             
-            //Guard against nil return values
-            guard let guardedCell = self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell else {
-                //Return a default UIImageView
+            guard let cell = self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell else {
                 return UIImageView(frame: CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0))
             }
-            //The PhotoCollectionViewCell was found in the collectionView, return the image
-            return guardedCell.flickerCellImage
+            return cell.flickerCellImage
         }
         
     }
     
-    //This function prevents the collectionView from accessing a deallocated cell. In the
-    //event that the cell for the selectedIndexPath is nil, a default CGRect is returned in its place
     func getFrameFromCollectionViewCell(for selectedIndexPath: IndexPath) -> CGRect {
         
-        //Get the currently visible cells from the collectionView
         let visibleCells = self.collectionView.indexPathsForVisibleItems
-        
-        //If the current indexPath is not visible in the collectionView,
-        //scroll the collectionView to the cell to prevent it from returning a nil value
         if !visibleCells.contains(self.selectedIndexPath) {
             
-            //Scroll the collectionView to the cell that is currently offscreen
             self.collectionView.scrollToItem(at: self.selectedIndexPath, at: .centeredVertically, animated: false)
             
-            //Reload the items at the newly visible indexPaths
             self.collectionView.reloadItems(at: self.collectionView.indexPathsForVisibleItems)
             self.collectionView.layoutIfNeeded()
             
             //Prevent the collectionView from returning a nil value
-            guard let guardedCell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
+            guard let cell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
                 return CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0)
             }
             
-            return guardedCell.frame
+            return cell.frame
         }
-            //Otherwise the cell should be visible
         else {
             //Prevent the collectionView from returning a nil value
-            guard let guardedCell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
+            guard let cell = (self.collectionView.cellForItem(at: self.selectedIndexPath) as? FlickerCollectionViewCell) else {
                 return CGRect(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY, width: 100.0, height: 100.0)
             }
-            //The cell was found successfully
-            return guardedCell.frame
+            return cell.frame
         }
     }
     
@@ -366,11 +259,10 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let wh = self.view.frame.width / displayConstant
-        return CGSize(width: wh, height: wh)
-        
+        let collectionViewWidth = collectionView.frame.width
+        return CGSize(width: collectionViewWidth/displayConstant, height: collectionViewWidth/displayConstant)
     }
+    
 }
 
 
@@ -384,25 +276,9 @@ extension ViewController: PhotoPageContainerViewControllerDelegate {
     }
 }
 
-extension ViewController: ZoomAnimatorDelegate {
+extension ViewController: AnimatorDelegate {
     
-    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
-        
-    }
-    
-    func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
-        let cell = self.collectionView.cellForItem(at: self.selectedIndexPath) as! FlickerCollectionViewCell
-        
-        let cellFrame = self.collectionView.convert(cell.frame, to: self.view)
-        
-        if cellFrame.minY < self.collectionView.contentInset.top {
-            self.collectionView.scrollToItem(at: self.selectedIndexPath, at: .top, animated: false)
-        } else if cellFrame.maxY > self.view.frame.height - self.collectionView.contentInset.bottom {
-            self.collectionView.scrollToItem(at: self.selectedIndexPath, at: .bottom, animated: false)
-        }
-    }
-    
-    func referenceImageView(for zoomAnimator: ZoomAnimator) -> UIImageView? {
+    func referenceImageView(for Animator: Animator) -> UIImageView? {
         
         //Get a guarded reference to the cell's UIImageView
         let referenceImageView = getImageViewFromCollectionViewCell(for: self.selectedIndexPath)
@@ -410,10 +286,7 @@ extension ViewController: ZoomAnimatorDelegate {
         return referenceImageView
     }
     
-    func referenceImageViewFrameInTransitioningView(for zoomAnimator: ZoomAnimator) -> CGRect? {
-        
-        self.view.layoutIfNeeded()
-        self.collectionView.layoutIfNeeded()
+    func referenceImageViewFrameInTransitioningView(for Animator: Animator) -> CGRect? {
         
         //Get a guarded reference to the cell's frame
         let unconvertedFrame = getFrameFromCollectionViewCell(for: self.selectedIndexPath)
@@ -428,6 +301,7 @@ extension ViewController: ZoomAnimatorDelegate {
     }
     
 }
+
 
 
 
